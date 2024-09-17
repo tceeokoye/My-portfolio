@@ -1511,10 +1511,7 @@ footer {
     flex-direction: row;
     gap: 0;
   }
-  .myPicture {
-    width: 144px;
-    height: 240px;
-  }
+
   .newsLetter {
     width: 276px;
     height: 240px;
@@ -1621,8 +1618,8 @@ footer {
     text-align: left;
   }
   .myPicture {
-    width: 144px;
-    height: 240px;
+    width: 125px;
+    height: 220px;
     gap: 0px;
     opacity: 0px;
     margin: 0;
@@ -1630,7 +1627,7 @@ footer {
     right: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 45px;
+    padding-top: 65px;
   }
   .underline1 {
     width: 32px;
