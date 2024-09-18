@@ -952,8 +952,8 @@ footer {
     padding-right: 7px;
     border: 0;
     margin-top: -5px;
-    padding-top: 35px;
-    height: 80px;
+    padding-top: 30px;
+    height: 75px;
     z-index: 9999999999999999999999999999999999999;
   }
   .dropNav {
@@ -1642,13 +1642,14 @@ footer {
   }
   .myPicture {
     width: 170px;
-    height: 260px;
+    height: 270px;
     gap: 0px;
     opacity: 0px;
     margin: 0;
     padding: 0;
     right: 0;
-    margin-top: -1px;
+    margin-top: -6.5px;
+    padding-right: 10px;
   }
   .underline1 {
     width: 32px;
