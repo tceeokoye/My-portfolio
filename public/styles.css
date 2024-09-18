@@ -952,8 +952,8 @@ footer {
     padding-right: 7px;
     border: 0;
     margin-top: -5px;
-    padding-top: 30px;
-    height: 75px;
+    padding-top: 25px;
+    height: 55px;
     z-index: 9999999999999999999999999999999999999;
   }
   .dropNav {
@@ -977,11 +977,11 @@ footer {
   .logo {
     width: 47px;
     height: 28px;
-    top: 54px;
     padding: 0;
     margin: 0;
     border: 0;
     padding: 2px;
+    margin-top: -6px;
   }
   .firstnav {
     display: none;
@@ -1641,15 +1641,16 @@ footer {
     text-align: left;
   }
   .myPicture {
-    width: 170px;
-    height: 270px;
+    width: 156px;
+    height: 240px;
     gap: 0px;
     opacity: 0px;
     margin: 0;
     padding: 0;
     right: 0;
-    margin-top: -6.5px;
-    padding-right: 10px;
+    margin-top: 18px;
+    padding-right: 30px;
+    margin-left: -7px;
   }
   .underline1 {
     width: 32px;
@@ -1677,6 +1678,7 @@ footer {
     padding: 2px;
     gap: 0px;
     opacity: 0px;
+
   }
   .socailHandle {
     display: flex;
