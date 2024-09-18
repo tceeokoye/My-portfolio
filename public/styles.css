@@ -718,15 +718,16 @@ section{
   padding-left: 75px;
   position: relative;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
 }
 .newsLetter {
-  width: 900.45px;
+  width: 850px;
   height: 628px;
   padding: 0;
   padding-top: 8px;
 }
 .myPicture {
-  position: absolute;
   width: 419px;
   height: 628px;
   /* background-image: url("images/unsplash_J5U-22o1ubw.png"); */
@@ -734,7 +735,7 @@ section{
   margin: 0;
   padding: 0;
   border: 0;
-  margin-top: -635px;
+  margin-top: px;
   overflow: hidden;
 }
 .sec4Area1 {
@@ -949,7 +950,10 @@ footer {
     padding: 0;
     padding-left: 7px;
     padding-right: 7px;
-    margin-top: 0;
+    border: 0;
+    margin-top: -5px;
+    padding-top: 30px;
+    height: 70px;
     z-index: 9999999999999999999999999999999999999;
   }
   .dropNav {
