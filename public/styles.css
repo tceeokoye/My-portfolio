@@ -36,6 +36,7 @@ body {
   background-size: cover;
 }
 header {
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -56,7 +57,7 @@ header {
   flex-direction: row;
   gap: 16px;
 }
-a{
+a {
   font-family: "Inter", sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -65,9 +66,10 @@ a{
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
 }
-#section1{
+#section1 {
   margin-top: 35px;
   padding-top: 10px;
+  box-sizing: border-box;
 }
 .bio {
   width: 50%;
@@ -85,6 +87,8 @@ a{
   text-align: center;
   color: #ffd054;
   text-align: center;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 span {
   color: #ffffff;
@@ -97,6 +101,9 @@ span {
   text-align: center;
   color: #ffffff;
   padding-top: 37px;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 50px;
 }
 #btn {
   display: block;
@@ -116,7 +123,7 @@ span {
   cursor: pointer;
 }
 .arrowContainer {
-  margin-top: -20px;
+  margin-top: -px;
 }
 #arrow {
   width: 0;
@@ -127,7 +134,7 @@ span {
   border: 2px solid #ffd054;
   /* margin-left: 50%; */
   margin: auto;
-  margin-top: 19.67px;
+  margin-top: 1px;
   background-color: #ffd054;
 }
 #arrow2 {
@@ -720,23 +727,27 @@ section{
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
+  gap: 0;
 }
 .newsLetter {
-  width: 850px;
+  width: px;
   height: 628px;
   padding: 0;
   padding-top: 8px;
+  position: relative;
 }
 .myPicture {
-  width: 419px;
-  height: 628px;
+  position: absolute;
+  right: 0;
+  padding-right: 55px;
+  padding-top: 0;
+}
+.myPicture1 {
   /* background-image: url("images/unsplash_J5U-22o1ubw.png"); */
   right: 0;
   margin: 0;
   padding: 0;
   border: 0;
-  margin-top: px;
-  overflow: hidden;
 }
 .sec4Area1 {
   margin: 0;
@@ -965,7 +976,6 @@ footer {
     gap: 16px;
     border-radius: 4px;
     padding-left: 6px;
-  
   }
   .dropA {
     font-family: Inter;
@@ -1031,6 +1041,9 @@ footer {
     padding: 0;
     border: 0;
     margin-top: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
   }
   .section1 {
     background: none;
@@ -1480,14 +1493,12 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 0;
-   
   }
   .img-slide {
     width: 50%;
     height: 200px;
     left: 0;
     gap: 0;
-   
   }
   .slidem {
     margin-left: -14px;
@@ -1523,23 +1534,24 @@ footer {
   }
   .news {
     width: 100%;
-    height: 268px;
+    height: 265px;
     margin: 0;
     padding: 0;
-    padding-top: 11px;
+    padding-top: 0px;
     display: flex;
     flex-direction: row;
     gap: 0;
+    box-sizing: border-box;
   }
 
   .newsLetter {
     width: 276px;
-    height: 240px;
+    height: 223px;
     margin: 0;
     padding: 0;
     gap: 0;
     padding-left: 24px;
-    margin-top: ;
+    margin-top: 10px;
   }
   .sec4Area1 {
     width: 228px;
@@ -1640,16 +1652,29 @@ footer {
     line-height: 16px;
     text-align: left;
   }
-  .myPicture {
-    width: 156px;
+  .myPicture1{
+    width: 144px;
+    height: 250px;
+    margin: 0;
+    padding: 0;
+    margin-right: 0;
+    padding-right: 0;
+    right: 0;
+    padding-left: 15px;
+    margin-top: -2px;
+    box-sizing: border-box;
+    margin-right: 10px;
+  }
+  .myPicture{
+    width: 154px;
     height: 240px;
+
     gap: 0px;
     opacity: 0px;
     margin: 0;
     padding: 0;
     right: 0;
-    margin-top: 18px;
-    padding-right: 30px;
+    margin-top: 17px;
     margin-left: -7px;
   }
   .underline1 {
@@ -1678,7 +1703,6 @@ footer {
     padding: 2px;
     gap: 0px;
     opacity: 0px;
-
   }
   .socailHandle {
     display: flex;
