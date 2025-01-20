@@ -603,7 +603,6 @@ button {
   height: fit-content !important;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-content: center;
   background-color: #313865;
   border-radius: 10px;
@@ -613,12 +612,13 @@ button {
   height: 100px;
   border: 2px solid #f2c85f;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 .project-swip {
   height: 650px !important;
 }
 #projects {
-  height: 100vh;
+  height: fit-content;
   margin-bottom: 40px;
 }
 .project-swip img {
@@ -1724,13 +1724,12 @@ footer {
   .swiper-slide {
     padding: 10px;
     text-align: left;
-    height: 300px !important;
     display: flex;
     flex-direction: column;
     justify-content: left;
     background-color: #313865;
     border-radius: 10px;
-    align-items: center;
+    align-content: space-between;
   }
   .sec4Area {
     padding-bottom: 10px;
