@@ -2320,8 +2320,7 @@ footer {
     line-height: normal;
   }
   .section4{
-    height: 110vh;
-    background-color: red;
+    height: 100vh;
   }
   .footer-container {
     justify-content: space-between;
@@ -2338,14 +2337,12 @@ footer {
     height: 530px;
   }
   .flex2{
-    background-color: brown;
     padding-bottom: 20px;
-    height: fit-content;
+    height: fit-contentg;
   }
   .section2{
   padding-top: 20px;
   height: fit-content;
-  background-color: red;
   }
 
 }
