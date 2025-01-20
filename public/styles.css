@@ -2314,23 +2314,34 @@ footer {
     border: 1px solid #ffd054;
   }
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 720px) {
   #bioh1 {
     font-size: 40px;
     line-height: normal;
   }
-  #projects{
+  .section4{
     height: 110vh;
+    background-color: red;
   }
   .footer-container {
     justify-content: space-between;
     gap: 0px;
     padding: 10px;
   }
+  #projects{
+    height: 120vh;
+  }
   .mySwiper{
     height: 430px;
   }
   #projects .mySwiper{
     height: 530px;
+  }
+  .flex2{
+    background-color: brown;g
+    padding-bottom: 20px;
+  }
+  .section2{
+  padding-top: 40px;
   }
 }
