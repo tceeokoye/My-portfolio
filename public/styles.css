@@ -1342,28 +1342,8 @@ footer {
     line-height: 70px;
     font-weight: 100;
   }
-  #btn {
-    display: block;
-    width: 150px;
-    height: 48px;
-    gap: 10px;
-    border: 0;
-    border-radius: 24px;
-    opacity: 0px;
-    background: #ffd054;
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
-    margin: auto;
-    margin-top: 0;
-    cursor: pointer;
-    text-decoration: none;
-    color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
+
   #arrow {
     border: 0.5px solid #ffd054;
     height: 26px;
@@ -1530,10 +1510,9 @@ footer {
     position: relative;
     box-sizing: border-box;
     padding: 10px;
+    height: 90%;
   }
   .arrowContainer {
-    width: 160px;
-    height: 100px;
     display: flex;
     position: absolute;
     align-content: center;
@@ -1543,26 +1522,12 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 0;
+    margin-top: 40px;
   }
   .fa-long-arrow-down::before {
     height: 70px !important;
     line-height: 70px;
     font-weight: 200;
-  }
-  #btn {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    width: 120px;
-    height: 31px;
-    padding: 8px 12px 8px 12px;
-    border-radius: 24px;
-    opacity: 0px;
-    font-family: "Inter" sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 14.52px;
-    text-align: center;
   }
   #arrow {
     border: 0.5px solid #ffd054;
@@ -2333,7 +2298,7 @@ footer {
     height: 430px;
   }
   #projects .mySwiper{
-    height: 550px;
+    height: 55g0px;
   }
   .flex2{
     padding-bottom: 20px;
