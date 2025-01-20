@@ -2327,13 +2327,13 @@ footer {
     padding: 10px;
   }
   #projects{
-    height: 120vh;
+    height: fit-content;
   }
   .mySwiper{
     height: 430px;
   }
   #projects .mySwiper{
-    height: 530px;
+    height: 550px;
   }
   .flex2{
     padding-bottom: 20px;
