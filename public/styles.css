@@ -1253,7 +1253,7 @@ footer {
 
 @media only screen and (max-width: 1300px){
   #projects{
-    height: 65vh;
+    height: 80vh;
     margin: 0;
   }
 }
@@ -1378,7 +1378,7 @@ footer {
   .footer-container {
   }
   #projects {
-    height: 70vh;
+    height: 100vh;
   }
   .mySwiper{
     height: 550px;
@@ -1821,10 +1821,10 @@ footer {
     height: 30px;
   }
   .mySwiper{
-    height: 350px;
+    height: 550px;
   }
   #projects .mySwiper{
-    height: 550px;
+    height: 600px;
   }
   .myServices-h1 {
     font-family: Inter;
