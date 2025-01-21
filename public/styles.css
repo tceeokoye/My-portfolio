@@ -306,7 +306,7 @@ span {
 }
 .section2 {
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   background: "#31386";
   margin-bottom: 10px;
 }
@@ -410,7 +410,7 @@ span {
 }
 .section3 {
   width: 100%;
-  height: 500px;
+  height: fit-content;
   display: flex;
   align-items: center;
   padding: 20px 40px;
@@ -1355,10 +1355,20 @@ footer {
     margin-top: 25px;
     margin-left: -2.7px;
   }
+  #section2{
+    padding-left: 0 10px;
+    gap: 0px;
+    height: 600px;
+    justify-content: space-between;  
+    border-radius: 0px 0px 120px 120px;
+  }
+  .flex2{
+    padding: 0;
+  }
   .footer-container {
   }
   #projects {
-    height: 100vh;
+    height: fit-content;
   }
   .mySwiper{
     height: 550px;
@@ -1381,8 +1391,13 @@ footer {
     justify-content: center;
   }
   #section2 {
-    border-radius: 0px 0px 130px 130px;
-    height: 500px;
+    border-radius: 0px 0px 120px 120px;
+    height: 660px;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+   .mySwiper{
+    height: 400px;
   }
 }
 @media only screen and (max-width: 850px) {
@@ -1541,7 +1556,7 @@ footer {
     margin-left: -2.7px;
   }
   .section2 {
-    height: 120vh;
+    height: fit-content;
   }
   #section2 {
     width: 100%;
@@ -1555,7 +1570,7 @@ footer {
     padding-left: 24px;
     padding-right: 24px;
     box-sizing: border-box;
-    height: 100%;
+    height: 70%;
   }
   .flex1 {
     height: 324px;
@@ -1563,7 +1578,7 @@ footer {
   }
   .flex2 {
     width: 100%;
-    height: 700px;
+    height: fit-content;
     border-bottom: 1px solid whitesmoke;
   }
   .drop-header {
@@ -1579,10 +1594,6 @@ footer {
     margin: 0;
     padding: 0;
     padding-top: 12px;
-  }
-  .flex1 {
-    height: 324px;
-    width: 324px;
   }
   .know {
     font-family: Inter;
@@ -1655,7 +1666,7 @@ footer {
     padding-right: 24px;
     box-sizing: border-box;
     padding-bottom: 24px;
-    height: 400px;
+    height: fit-content;
   }
   .area {
     margin: 0;
@@ -1701,12 +1712,21 @@ footer {
   }
   .section3 {
     width: 100%;
+    height: fit-content;
     box-sizing: border-box;
   }
   #section3 {
     border-bottom: 1px solid whitesmoke;
-    height: 100%;
     padding: 0 30px;
+   
+  }
+  .section3-cont{
+    border-bottom: 1px solid whitesmoke;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  .section4{
+    height: fit-content;
   }
   .section3Flex {
     flex-direction: column;
@@ -2284,7 +2304,7 @@ footer {
     line-height: normal;
   }
   .section4{
-    height: 100vh;
+    height: fit-content;
   }
   .footer-container {
     justify-content: space-between;
@@ -2295,10 +2315,10 @@ footer {
     height: fit-content;
   }
   .mySwiper{
-    height: 430px;
+    height: 43g0px;
   }
   #projects .mySwiper{
-    height: 55g0px;
+   height: 550px;
   }
   .flex2{
     padding-bottom: 20px;
