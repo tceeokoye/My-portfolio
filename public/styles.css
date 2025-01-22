@@ -162,16 +162,6 @@ section.visible {
   gap: 16px;
 }
 
-.dropA {
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 1);
-  transition: color 0.3s ease;
-  position: relative;
-}
-
 .dropA:hover {
   color: #f2c85f; /* Hover color */
 }
@@ -182,7 +172,7 @@ section.visible {
 #home1:hover {
   color: #fff;
 }
-.dropA::after {
+/* .dropA::after {
   content: "";
   position: absolute;
   width: 0;
@@ -194,8 +184,42 @@ section.visible {
 }
 .dropA:hover::after {
   width: 100%;
-}
+} */
 /* Utility */
+
+.dropA {
+  font-family: "Inter", sans-serif;
+  font-size: 18px; /* Default desktop size */
+  font-weight: 400;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  padding: 10px 15px; /* Add padding for better touch targets */
+}
+
+/* Hover Effect */
+.dropA:hover,
+.dropA:focus {
+  color: #ffd054; /* Highlight color */
+  transform: scale(1.05); /* Slight scale-up effect */
+}
+
+/* Underline Effect */
+.dropA::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffd054;
+  transition: width 0.3s ease;
+}
+.dropA:hover::after,
+.dropA:focus::after {
+  width: 100%;
+}
 
 #section1 {
   height: 100vh;
@@ -225,49 +249,49 @@ section.visible {
   font-family: "Inter", sans-serif;
   font-size: 70px;
   font-weight: 700;
-  line-height: 78.41px;
+  line-height: 1.2;
   text-align: center;
   color: #ffd054;
-  text-align: center;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 0 24px;
+  letter-spacing: 1.5px;
 }
 span {
   color: #ffffff;
 }
 #biop {
   font-family: "Inter", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 19.36px;
+  line-height: 1.6;
   text-align: center;
   color: #ffffff;
-  padding-top: 37px;
-  padding-left: 24px;
-  padding-right: 24px;
-  height: 50px;
+  padding: 37px 24px 0;
 }
 #btn {
-  display: block;
   width: 150px;
   height: 48px;
-  gap: 10px;
   border: 0;
   border-radius: 24px;
-  opacity: 0px;
   background: #ffd054;
   font-family: "Inter", sans-serif;
   font-size: 20px;
   font-weight: 400;
+  color: #000000;
   text-align: center;
-  margin: auto;
-  margin-top: 0;
+  margin: 20px auto 0;
   cursor: pointer;
   text-decoration: none;
-  color: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#btn:hover {
+  background: #ffc34a;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 .arrowContainer {
   bottom: 0;
@@ -312,41 +336,37 @@ span {
 }
 #section2 {
   width: 100%;
-  height: 550px;
+  height: 600px;
   gap: 100px;
   border-radius: 0px 0px 180px 180px;
-  opacity: 0px;
   background: #313865;
   display: flex;
   flex-direction: row;
-  overflow: hidden;
   justify-content: center;
+  overflow: hidden;
+  padding: 20px 0;
 }
 .flex1 {
   height: 450px;
-  gap: 0px;
-  opacity: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .flex2 {
   width: 50%;
   height: 450px;
-  gap: 0px;
-  opacity: 0px;
-  padding-top: 50px;
-}
-
-.flex2 .area {
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
 }
 .abt {
   font-family: "Inter", sans-serif;
   font-size: 40px;
   font-weight: 600;
   line-height: 48.41px;
-  text-align: left;
   color: #ffffff;
   margin: 0;
-  padding: 0;
 }
 .underline {
   width: 52px;
@@ -358,103 +378,100 @@ span {
 
 .abt2 {
   font-family: "Inter", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 29.36px;
-  text-align: left;
+  line-height: 1.8;
   color: #ffffff;
-  padding-top: 10px;
 }
 .btnContainer {
   display: flex;
   flex-direction: row;
-  gap: 0px;
   gap: 32px;
   margin-top: 32px;
 }
+
 #btn2 {
   width: 150px;
   height: 48px;
-  gap: 10px;
   border-radius: 24px;
   border: 1px solid #ffd054;
-  opacity: 0px;
-  background: 0px;
-  gap: 0px;
-  opacity: 0px;
+  background: none;
   font-family: "Inter", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 24.2px;
-  text-align: center;
   color: #ffd054;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+#btn2:hover {
+  background-color: #ffd054;
+  color: #313865;
+}
+
 #btn3 {
   width: 150px;
   height: 48px;
-  gap: 10px;
   border-radius: 24px;
   border: 1px solid #ffd054;
-  opacity: 0px;
-  background: 0px;
-  gap: 0px;
-  opacity: 0px;
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 24.2px;
-  text-align: center;
   background-color: #ffd054;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #313865;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+#btn3:hover {
+  background-color: #e6b947;
+}
+
 .section3 {
   width: 100%;
-  height: fit-content;
-  display: flex;
-  align-items: center;
   padding: 20px 40px;
-
-  
+  display: flex;
+  justify-content: center;
+  height: fit-content;
 }
+.section3-cont {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #section3 {
   width: 100%;
-  height: 400px;
+  height: 480px;
   padding: 20px;
-  border-radius: 12px;
   background-color: #313865;
+  border-radius: 12px;
 }
 .area {
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   height: fit-content;
+  width: fit-content;
+  padding-bottom: 20px;
 }
 .areaH {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 8px;
 }
-.area p {
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 29.05px;
-  text-align: left;
-  color: #ffd054;
-}
-.area h1 {
-  font-family: "Inter", sans-serif;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 48.41px;
-  text-align: left;
-  color: #ffffff;
-  padding: 0;
-  border: 0;
-}
+
 .section3Flex {
   display: flex;
   flex-direction: row;
@@ -492,17 +509,16 @@ span {
 .language {
   font-family: "Inter", sans-serif;
   font-size: 24px;
-  font-weight: 400;
-  text-align: left;
-  color: #ffffff;
+  font-weight: 600;
+  color: #ffd054;
 }
 
 .perc {
   font-family: "Inter", sans-serif;
   font-size: 24px;
-  font-weight: 400;
   color: #ffffff;
-  text-align: right;
+  font-weight: 300;
+  margin-top: 10px;
 }
 
 .percentage {
@@ -528,6 +544,7 @@ span {
 
 .section4 {
   padding-top: 50px;
+  height: fit-content;
 }
 
 /* .sec4area1 {
@@ -541,24 +558,26 @@ span {
   border: 0;
   padding-bottom: 20px; 
 }*/
-
+.sec4Area {
+  text-align: left;
+  margin: auto;
+}
 #services .areaH {
   align-items: center;
 }
-.sec4area1 {
-  text-align: left;
-  padding-left: 0;
-}
-.sec4area2 {
+.area p {
   font-family: "Inter", sans-serif;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48.41px;
-  text-align: left;
+  font-size: 24px;
+  font-weight: 300;
+  color: #ffd054;
+  text-transform: uppercase;
+}
+.areaH h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
   color: #ffffff;
   margin: 0;
-  padding: 0;
-  border: 0;
 }
 .main {
   position: relative;
@@ -588,7 +607,7 @@ span {
 .swiper-container {
   width: 100%;
   padding: 20px 10px;
-  height: 520px;
+  height: fit-content;
   display: flex;
   align-items: center;
   position: relative;
@@ -596,7 +615,11 @@ span {
 button {
   cursor: pointer;
 }
-
+.swiper-slide {
+  text-align: left;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
 #services .swiper-slide {
   padding: 10px;
   text-align: left;
@@ -617,9 +640,20 @@ button {
 .project-swip {
   height: 650px !important;
 }
+.custom-swiper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background-color: #333333;
+  border-radius: 10px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+}
 #projects {
   height: fit-content;
-  margin-bottom: 40px;
+}
+.flex-im {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 .project-swip img {
   width: 100%;
@@ -669,31 +703,25 @@ button {
   bottom: -30px;
 }
 .mySwiper {
-  height: 500px;
-}
-#projects .mySwiper{
   height: 600px;
 }
-.area{
-  padding-bottom: 30px;
+#projects .mySwiper {
+  height: 600px;
 }
 .myServices-h1 {
   font-family: "Inter", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  color: #ffffff;
-  padding: 0;
-  margin: 0;
-  text-align: left !important;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffd054;
+  margin-bottom: 15px;
 }
 .myServices-p {
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 20.05px;
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 20px;
   text-align: left;
-  color: #ffffff;
-  padding: 10px 0px;
 }
 .custom-prev,
 .custom-next {
@@ -739,6 +767,15 @@ button {
 .next:hover {
   opacity: 1;
 }
+.custom-prev i,
+.custom-next i {
+  font-size: 36px;
+  color: #ffd054;
+}
+.custom-prev:hover i,
+.custom-next:hover i {
+  color: #ffffff !important;
+}
 .indicator {
   display: flex;
   flex-direction: row;
@@ -774,211 +811,6 @@ section{
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 } */
-.ourWork {
-  width: fit-content;
-  margin: auto;
-  padding-top: 91px;
-}
-.ourWork1 {
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  text-align: left;
-  color: #ffd054;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-.ourWork2 {
-  font-family: Inter;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48.41px;
-  text-align: left;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-.Briefcase {
-  width: 100%;
-  position: absolute;
-}
-.brief {
-  padding: 0;
-  margin: 0;
-  left: 50%;
-  transform: translate(-50%);
-  position: absolute;
-}
-.straight-line {
-  width: 0px;
-  height: 1332px;
-  gap: 0px;
-  border: 1px solid #ffd054;
-  position: absolute;
-  left: 50%;
-  top: 58px;
-  transform: translate(-50%);
-}
-
-.branchBox {
-  width: 100%;
-  position: relative;
-  height: 100%;
-  /* background-color: aqua; */
-  /* top: 400px; */
-  top: 0;
-}
-
-.branchBox1 {
-  width: 450px;
-  height: 226px;
-  padding: 32px 16px 32px 16px;
-  gap: 12px;
-  border-radius: 8px;
-  border: 1px solid #ffd054;
-  background-color: brown;
-}
-.first {
-  position: absolute;
-  width: 450px;
-  height: 231px;
-  top: 110px;
-  left: 95px;
-}
-.first-flex {
-  width: 450px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0;
-}
-.branchBox2 {
-  width: 512px;
-  height: 226px;
-  padding: 32px 16px 32px 16px;
-  gap: 12px;
-  border-radius: 8px;
-  border: 1px solid #ffd054;
-  margin-left: 62px;
-}
-.second {
-  width: 450px;
-  height: 231px;
-  margin: 0;
-  background: transparent;
-  position: absolute;
-  right: 0;
-  top: 760px;
-  left: 95px;
-}
-.second-flex {
-  width: 450px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.branchBox3 {
-  width: 512px;
-  height: 226px;
-  padding: 32px 16px 32px 16px;
-  gap: 12px;
-  border-radius: 8px;
-  border: 1px solid #ffd054;
-  margin-left: 744px;
-}
-.third {
-  height: 231px;
-  width: 450px;
-  position: absolute;
-  background: green;
-  top: 440px;
-  right: 95px;
-}
-.fourth {
-  width: 100%;
-  margin: 0;
-  margin-top: 358px;
-}
-
-.innerLine {
-  height: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-}
-.innerLine1 {
-  width: 60px;
-  height: 0px;
-  gap: 0px;
-  border: 1px solid#FFD054;
-}
-.innerLine2 {
-  width: 12px;
-  height: 12px;
-  background: #ffe39a;
-  border-radius: 50%;
-}
-.third-flex {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
-/* .new1 {
-  margin-left: 670px;
-  margin-top: -190px;
-} */
-.call {
-  font-family: Inter;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 38.73px;
-  text-align: right;
-  color: #ffd054;
-}
-.call1 {
-  font-family: Inter;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 29.05px;
-  text-align: right;
-  color: #ffffff;
-}
-.callp {
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 19.36px;
-  text-align: right;
-  color: #ffffff;
-}
-.call2 {
-  font-family: Inter;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 38.73px;
-  text-align: left;
-  color: #ffd054;
-}
-.call3 {
-  font-family: Inter;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 29.05px;
-  text-align: left;
-  color: #ffffff;
-}
-.call4 {
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 19.36px;
-  text-align: left;
-  color: #ffffff;
-}
 .img-slide {
   width: 403.33px;
   height: 500px;
@@ -986,6 +818,15 @@ section{
   border-radius: 20px;
   flex-shrink: 0;
   background: none;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #ffd054;
+  opacity: 0.6;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ffd054;
+  opacity: 1;
 }
 .nav2 {
   position: absolute;
@@ -997,56 +838,40 @@ section{
 }
 .section6 {
   width: 100%;
-  height: 628px;
-  border: 0;
-  padding: 0;
-  margin: 0;
+  height: fit-content;
   margin-top: 50px;
-}
-.sec4Area {
-  align-items: center;
-  text-align: left;
+  padding: 0;
+  position: relative;
 }
 
 .news {
   width: 100%;
-  height: 590px;
+  height: fit-content;
   opacity: 0px;
   background: #313865;
   border-top-right-radius: 100px;
-  padding: 0;
-  padding-left: 15px;
+  padding: 0 18px;
   position: relative;
   box-sizing: border-box;
   display: flex;
   gap: 0;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   overflow: hidden;
 }
 .newsLetter {
   width: 50%;
-  height: 628px;
-  padding: 0;
   padding-top: 8px;
 }
+
 .myPicture {
   padding-top: 10px;
   height: 100%;
 }
-.myPicture1 {
-  /* background-image: url("images/unsplash_J5U-22o1ubw.png"); */
-  right: 0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
 .sec4Area1 {
   margin: 0;
-  margin-top: 40px;
   gap: 0px;
   opacity: 0px;
-  padding-bottom: 20px;
 }
 .sec4area3 {
   font-family: Inter;
@@ -1070,10 +895,8 @@ section{
   height: 6px;
   background: #ffd054;
   margin: 0px;
-  margin-top: -2px;
 }
 form {
-  height: 424px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1084,29 +907,21 @@ form {
   flex-direction: column;
 }
 .email {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 24px;
   font-weight: 500;
-  line-height: 16px;
-  text-align: left;
   color: #00000080;
   width: 100%;
   height: 62px;
-  padding: 10px;
-  gap: 10px;
-  border: 0;
-  border-radius: 20px;
-  opacity: 0px;
   padding-left: 10px;
+  border-radius: 20px;
   margin-top: 13px;
+  background-color: #fff;
 }
 label {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 24px;
   font-weight: 500;
-  line-height: 16px;
-  letter-spacing: -0.01em;
-  text-align: left;
   color: #ffffff;
 }
 .text-container {
@@ -1115,10 +930,15 @@ label {
   gap: 23px;
 }
 #text {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 24px;
   font-weight: 500;
-  text-align: left;
+  color: #000;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #fff;
+  height: 198px;
+  resize: none;
 }
 textarea {
   width: 100%;
@@ -1132,20 +952,18 @@ textarea {
 }
 .submit {
   width: 98px;
+  padding: 10px;
   height: 40px;
-  border-radius: 30px;
-  opacity: 0px;
+  border-radius: 10px;
   background: #ffd054;
   cursor: pointer;
-  border: 0;
-  margin-top: -2px;
-  padding: 10px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 20px;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 }
 input {
   align-items: center;
@@ -1251,8 +1069,8 @@ footer {
   display: none;
 }
 
-@media only screen and (max-width: 1300px){
-  #projects{
+@media only screen and (max-width: 1300px) {
+  #projects {
     height: 80vh;
     margin: 0;
   }
@@ -1343,7 +1161,6 @@ footer {
     font-weight: 100;
   }
 
-
   #arrow {
     border: 0.5px solid #ffd054;
     height: 26px;
@@ -1355,14 +1172,14 @@ footer {
     margin-top: 25px;
     margin-left: -2.7px;
   }
-  #section2{
+  #section2 {
     padding-left: 0 10px;
     gap: 0px;
     height: 600px;
-    justify-content: space-between;  
+    justify-content: space-between;
     border-radius: 0px 0px 120px 120px;
   }
-  .flex2{
+  .flex2 {
     padding: 0;
   }
   .footer-container {
@@ -1370,15 +1187,15 @@ footer {
   #projects {
     height: fit-content;
   }
-  .mySwiper{
+  .mySwiper {
     height: 550px;
   }
-  #projects .mySwiper{
+  #projects .mySwiper {
     height: 570px;
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 900px) {
   #btn2,
   #btn3 {
     width: 110px;
@@ -1396,11 +1213,9 @@ footer {
     box-sizing: border-box;
     padding: 10px;
   }
-   .mySwiper{
+  .mySwiper {
     height: 400px;
   }
-}
-@media only screen and (max-width: 850px) {
   * {
     padding: 0;
     margin: 0;
@@ -1427,12 +1242,6 @@ footer {
     gap: 40px;
     border-radius: 4px;
     padding-left: 6px;
-  }
-  .dropA {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 29.1px;
-    text-align: center;
   }
   .logo2 {
     display: block;
@@ -1669,12 +1478,7 @@ footer {
     height: fit-content;
   }
   .area {
-    margin: 0;
-    left: 0;
-    padding: 0;
-    padding-top: 8px;
-    gap: 10px;
-    padding-bottom: 30px;
+    gap: 15px;
   }
   .a4 {
     margin-top: 5px;
@@ -1714,18 +1518,14 @@ footer {
     width: 100%;
     height: fit-content;
     box-sizing: border-box;
+ 
   }
-  #section3 {
-    border-bottom: 1px solid whitesmoke;
-    padding: 0 30px;
-   
-  }
-  .section3-cont{
+  .section3-cont {
     border-bottom: 1px solid whitesmoke;
     width: 100%;
     padding-bottom: 30px;
   }
-  .section4{
+  .section4 {
     height: fit-content;
   }
   .section3Flex {
@@ -1776,13 +1576,12 @@ footer {
     box-sizing: border-box;
   }
   .sec4Area {
-    width: 100%;
     padding: 0;
     padding-top: 8px;
+    padding-bottom: 20px;
   }
   .sec4area1 {
     font-family: Inter;
-    font-size: 12px;
     font-weight: 400;
     line-height: 14.52px;
     text-align: left;
@@ -1802,10 +1601,10 @@ footer {
     width: 30px;
     height: 30px;
   }
-  .mySwiper{
+  .mySwiper {
     height: 550px;
   }
-  #projects .mySwiper{
+  #projects .mySwiper {
     height: 600px;
   }
   .myServices-h1 {
@@ -1844,173 +1643,6 @@ footer {
     margin-left: 0;
     padding-bottom: 40px;
   } */
-  .section5 {
-    height: 100vh;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    padding-top: 8px;
-    box-sizing: border-box;
-    border-bottom: 1px solid whitesmoke;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-  .ourWork {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .ourWork1 {
-    font-family: Inter;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14.52px;
-    text-align: left;
-  }
-  .ourWork2 {
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 16.94px;
-    text-align: left;
-  }
-  .Briefcase {
-    height: 800px;
-    margin: 0;
-    margin-top: -80px;
-    margin-left: -10px;
-  }
-
-  .brief {
-    width: 42px;
-    height: 42px;
-    margin: 0;
-    padding: 0;
-  }
-  .straight-line {
-    margin: 0;
-    margin-left: 19px;
-    height: 870px;
-    display: flex;
-    flex-direction: column;
-  }
-  .branchBox {
-    width: 93%;
-    margin: 0;
-    padding: 0;
-    margin-left: 0;
-    height: 642px;
-    margin-left: 14px;
-    padding-right: 24px;
-    display: flex;
-    flex-direction: column;
-    margin-top: -630px;
-    padding-top: -40px;
-    box-sizing: border-box;
-  }
-
-  .branchBox1a {
-    width: 225px;
-    height: 100px;
-    margin: 0;
-    margin-left: 45px;
-    margin-top: -20px;
-  }
-  .branchBox2 {
-    width: 225px;
-    height: 100px;
-    margin-top: -344px;
-    margin-left: 45px;
-  }
-  .call {
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 16.94px;
-    text-align: left;
-  }
-  .call1 {
-    font-family: Inter;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 14.52px;
-    text-align: left;
-  }
-  .callp {
-    font-family: Inter;
-    font-size: 10px;
-    font-weight: 600;
-    line-height: 12.1px;
-    text-align: left;
-  }
-  .call2 {
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 16.94px;
-    text-align: left;
-  }
-  .call3 {
-    font-family: Inter;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 14.52px;
-    text-align: left;
-  }
-  .call4 {
-    width: 100%;
-    font-family: Inter;
-    font-size: 10px;
-    font-weight: 600;
-    line-height: 12.1px;
-    text-align: left;
-  }
-  .first {
-    margin-top: -800px;
-    margin: 0;
-    padding: 0;
-    margin: auto;
-  }
-  .innerLine {
-    margin: 0;
-    padding: 0;
-    margin-top: -130px;
-    margin-left: -10px;
-  }
-  .innerLine1 {
-    width: 41px;
-  }
-  .innerA {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-  .innerB {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-  .innerC {
-    margin: 0;
-    margin-top: -120px;
-    margin-left: -10px;
-  }
-  .branchBox3 {
-    width: 225px;
-    height: 100px;
-  }
-  .lastline {
-    margin-top: -120px;
-  }
-  .box3 {
-    margin: 0;
-    margin-top: 645px;
-    margin-left: 45px;
-  }
-  .box4 {
-    margin: 0;
-    margin-top: -324px;
-    margin-left: 45px;
-  }
   .main2 {
     gap: 0;
     display: flex;
@@ -2039,42 +1671,39 @@ footer {
   }
   .section6 {
     width: 100%;
-    height: 300px;
     margin: 0;
     padding: 0;
     margin-top: 30px;
     overflow: hidden;
+    height: fit-content;
   }
   .news {
+    height: auto;
     width: 100%;
-    height: 235px;
     margin: 0;
-    padding: 0;
     padding-top: 0px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     gap: 0;
     box-sizing: border-box;
     border-top-right-radius: 50px;
+    justify-content: space-between;
   }
-
   .newsLetter {
-    width: 276px;
-    height: 223px;
+    width: 50%;
+    height: fit-content;
     margin: 0;
     padding: 0;
     gap: 0;
     padding-left: 10px;
     margin-top: 10px;
   }
-  .sec4Area1 {
-    width: 228px;
-    height: 32px;
-    gap: 0px;
-    opacity: 0px;
-    padding: 0;
-    margin: 0;
+
+  .area p {
+    font-size: 18px;
+  }
+  .areaH h1 {
+    font-size: 36px;
   }
   .sec4area3 {
     font-family: Inter;
@@ -2094,26 +1723,35 @@ footer {
     margin: 0;
     padding: 0;
   }
+  .myServices-h1 {
+    font-size: 22px; /* Smaller title font */
+  }
+
+  .myServices-p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .custom-prev i,
+  .custom-next i {
+    font-size: 28px;
+  }
   form {
     width: 100%;
     padding: 0;
     margin: 0;
-    padding-top: 10px;
+    padding: 10px 0;
   }
   .email-container {
+    width: 100%;
+    margin: 0;
+  }
+  .email {
     font-family: Inter;
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
     letter-spacing: -0.01em;
     text-align: left;
-    margin: 0;
-    padding: 0;
-    width: fit-content;
-  }
-  .email {
-    width: 210px;
-    height: 40px;
     margin-top: 4px;
     padding: 10px;
     font-family: Inter;
@@ -2124,15 +1762,14 @@ footer {
     border-radius: 5px;
   }
   .text-container {
-    width: fit-content;
+    width: 100%;
     margin: 0;
     padding: 0;
-    margin-top: -20px;
     gap: 0;
   }
   #text {
-    width: 210px;
-    height: 60px;
+    width: 100%;
+    height: 100px;
     padding: 10px;
     margin-top: 4 px;
     font-family: Inter;
@@ -2144,62 +1781,59 @@ footer {
   }
   .submit {
     font-family: Inter;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
-    line-height: 16px;
     text-align: center;
-    width: 70px;
-    height: 25px;
+    width: 100px;
+    display: flex;
+    height: 36px;
     gap: 10px;
     border: 0;
-    padding: 0;
-    padding-left: 4px;
-    padding-right: 4px;
     box-sizing: border-box;
     top: -20px;
-    margin: 0;
     margin-top: -25px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    padding: 10px;
   }
   label {
     font-family: Inter;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 16px;
     text-align: left;
+    padding-bottom: 6px;
   }
   .myPicture1 {
-    position: absolute;
-    height: 250px;
+    height: 100%;
     margin: 0;
     padding: 0;
     margin-right: 0;
     padding-right: 0;
     right: 0;
     margin-right: 0px;
-    margin-top: -2px;
+    margin-top: 33px;
     box-sizing: border-box;
-    margin-right: -10px;
-    margin-left: 15px;
   }
   .myPicture {
-    height: 240px;
-
+    height: 390px;
+    width: auto;
     gap: 0px;
     opacity: 0px;
     margin: 0;
     padding: 0;
     right: 0;
-    margin-top: 17px;
-    margin-left: -7px;
   }
   .underline1 {
     width: 32px;
-    height: 4px;
     gap: 0px;
     opacity: 0px;
-    margin-top: 2px;
   }
+  .areaH {
+    gap: 10px;
+  }
+  label {
+  }
+
   footer {
     width: 100%;
     height: 134px;
@@ -2243,8 +1877,7 @@ footer {
     padding-right: 24px;
     box-sizing: border-box;
   }
-  .details {
-  }
+
   .details {
     width: 194px;
     display: flex;
@@ -2298,12 +1931,16 @@ footer {
     border: 1px solid #ffd054;
   }
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 760px) {
   #bioh1 {
-    font-size: 40px;
-    line-height: normal;
+    font-size: 48px;
+    line-height: 1.2;
   }
-  .section4{
+  #biop {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  .section4 {
     height: fit-content;
   }
   .footer-container {
@@ -2311,22 +1948,233 @@ footer {
     gap: 0px;
     padding: 10px;
   }
-  #projects{
+  #projects {
     height: fit-content;
   }
-  .mySwiper{
+  .mySwiper {
     height: 430px;
   }
-  #projects .mySwiper{
-   height: 550px;
+  #projects .mySwiper {
+    height: 550px;
   }
-  .flex2{
+  .flex2 {
     padding-bottom: 20px;
     height: fit-contentg;
   }
-  .section2{
-  padding-top: 20px;
-  height: fit-content;
+  #section2 {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    border-radius: 0;
+    padding: 20px;
+  }
+  .flex2 {
+    padding: 10px;
   }
 
+  .abt {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .abt2 {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 10px 0;
+  }
+  #btn2,
+  #btn3 {
+    width: 80%;
+    height: 30px;
+    font-size: 16px;
+  }
+  .custom-prev i,
+  .custom-next i {
+    font-size: 28px;
+  }
+  .language {
+    font-size: 20px;
+  }
+
+  .perc {
+    font-size: 14px;
+  }
+  .dropA {
+    font-size: 16px;
+    padding: 8px 12px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 760px) {
+  #bioh1 {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+  #biop {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  .section4 {
+    height: fit-content;
+  }
+  .footer-container {
+    justify-content: space-between;
+    gap: 0px;
+    padding: 10px;
+  }
+  #projects {
+    height: fit-content;
+  }
+  .mySwiper {
+    height: 430px;
+  }
+  #projects .mySwiper {
+    height: 550px;
+  }
+  .flex2 {
+    padding-bottom: 20px;
+    height: fit-contentg;
+  }
+  #section2 {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    border-radius: 0;
+    padding: 20px;
+  }
+  .flex2 {
+    padding: 10px;
+  }
+
+  .abt {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .abt2 {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 10px 0;
+  }
+  #btn2,
+  #btn3 {
+    width: 80%;
+    height: 30px;
+    font-size: 16px;
+  }
+  .custom-prev i,
+  .custom-next i {
+    font-size: 28px;
+  }
+  .language {
+    font-size: 20px; 
+  }
+
+  .perc {
+    font-size: 14px;
+  }
+  .dropA {
+    font-size: 16px; 
+    padding: 8px 12px; 
+    text-align: center;
+  }
+  .newsLetter {
+    width: 100%;
+    padding-top: 20px;
+  }
+  .myPicture{
+    height: 370px;
+  }
+  .email-container label,
+  .text-container label {
+    font-size: 18px;
+  }
+  .email,
+  #text {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .email{
+    height: 40px;
+  }
+  #text{
+    height: 80px;
+  }
+  .submit {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .dropA {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  #bioh1 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  #biop {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  .myPicture{
+    height: 250px;
+  }
+  .myPicture{
+    margin-top: 20px;
+  }
+  .area h1{
+    font-size: 24px;
+  }
+  .sec4area4{
+    font-size: 24px;
+    text-wrap: nowrap;
+  }
+  .email-container label,
+  .text-container label {
+    font-size: 16px;
+  }
+  .email,
+  #text {
+    font-size: 14px;
+  }
+  .submit {
+    width: 80px;
+    font-size: 14px;
+    padding: 8px 15px;
+    margin: 0;
+    height: 30px;
+    border-radius: 8px;
+  }
+  .newsLetter{
+    padding: 0;
+    gap: 6px;
+  }
+  form{
+    gap: 6px;
+    height: fit-content;
+    padding-top: 0;
+  }
+  .text-container{
+    height: fit-content;
+  }
+  .mySwiper {
+    height: 450px;
+  }
+  #projects .mySwiper {
+    height: 550px;
+  }
+  .news{
+    padding: 12px;
+    border-top-right-radius: 180px;
+  }
+  .email{
+    height: 28px;
+  }
+  #text{
+    height: 50px;
+  }
 }
