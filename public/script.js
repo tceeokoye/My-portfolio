@@ -94,7 +94,7 @@ const swiper = new Swiper(".mySwiper", {
   centeredSlides: false, // Default behavior
   loop: true,
   autoplay: {
-    delay: 2500,
+    delay: 7000,
     disableOnInteraction: false,
   },
   navigation: {
