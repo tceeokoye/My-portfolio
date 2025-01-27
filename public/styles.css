@@ -611,6 +611,7 @@ span {
   display: flex;
   align-items: center;
   position: relative;
+  background-color: red;
 }
 button {
   cursor: pointer;
@@ -715,7 +716,7 @@ button {
   font-weight: 600;
   color: #ffd054;
   margin-bottom: 15px;
-  line-height: 1.6px;
+  line-height: 32.9px;
 }
 .myServices-p {
   font-family: "Inter", sans-serif;
