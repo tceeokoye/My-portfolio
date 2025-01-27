@@ -611,7 +611,6 @@ span {
   display: flex;
   align-items: center;
   position: relative;
-  background-color: red;
 }
 button {
   cursor: pointer;
@@ -908,6 +907,7 @@ form {
 .email-container {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 .email {
   font-family: Inter, sans-serif;
@@ -916,9 +916,8 @@ form {
   color: #00000080;
   width: 100%;
   height: 62px;
-  padding-left: 10px;
+  padding: 10px;
   border-radius: 20px;
-  margin-top: 13px;
   background-color: #fff;
 }
 label {
@@ -930,7 +929,7 @@ label {
 .text-container {
   display: flex;
   flex-direction: column;
-  gap: 23px;
+  gap: 10px;
 }
 #text {
   font-family: Inter, sans-serif;
@@ -946,7 +945,6 @@ label {
 textarea {
   width: 100%;
   height: 198px;
-  gap: 10px;
   border: 0;
   border-radius: 20px;
   opacity: 0px;
@@ -1686,14 +1684,15 @@ footer {
     margin: 0;
     padding-top: 0px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 0;
     box-sizing: border-box;
-    border-top-right-radius: 50px;
+    border-top-right-radius: 0;
     justify-content: space-between;
+
   }
   .newsLetter {
-    width: 50%;
+    width: 100%;
     height: fit-content;
     margin: 0;
     padding: 0;
@@ -1747,29 +1746,16 @@ footer {
   .email {
     font-family: Inter;
     font-size: 14px;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: -0.01em;
-    text-align: left;
-    margin-top: 4px;
-    padding: 10px;
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 16px;
-    text-align: left;
     border-radius: 5px;
   }
   .text-container {
     width: 100%;
     margin: 0;
     padding: 0;
-    gap: 0;
   }
   #text {
     width: 100%;
-    height: 100px;
-    padding: 10px;
+    height: 150px;
     margin-top: 4 px;
     font-family: Inter;
     font-size: 14px;
@@ -1789,9 +1775,6 @@ footer {
     gap: 10px;
     border: 0;
     box-sizing: border-box;
-    top: -20px;
-    margin-top: -25px;
-    margin-bottom: 30px;
     padding: 10px;
   }
   label {
@@ -1800,7 +1783,7 @@ footer {
     font-weight: 500;
     line-height: 16px;
     text-align: left;
-    padding-bottom: 6px;
+    padding: 10px 0px 6px;
   }
   .myPicture1 {
     height: 100%;
@@ -2093,14 +2076,8 @@ footer {
   .email,
   #text {
     font-size: 16px;
-    padding: 10px;
   }
-  .email{
-    height: 40px;
-  }
-  #text{
-    height: 80px;
-  }
+ 
   .submit {
     font-size: 16px;
     padding: 10px;
@@ -2122,12 +2099,6 @@ footer {
     font-size: 16px;
     line-height: 1.8;
   }
-  .myPicture{
-    height: 250px;
-  }
-  .myPicture{
-    margin-top: 20px;
-  }
   .area h1{
     font-size: 24px;
   }
@@ -2147,7 +2118,6 @@ footer {
     width: 80px;
     font-size: 14px;
     padding: 8px 15px;
-    margin: 0;
     height: 30px;
     border-radius: 8px;
   }
@@ -2171,13 +2141,9 @@ footer {
   }
   .news{
     padding: 12px;
-    border-top-right-radius: 180px;
   }
   .email{
-    height: 28px;
-  }
-  #text{
-    height: 50px;
+    height: 42px;
   }
   .area p{
     font-size: 16px;

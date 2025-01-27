@@ -7,16 +7,23 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     const currentScrollY = window.scrollY;
 
-    if (currentScrollY > lastScrollY) {
+    if (currentScrollY === 0) {
+      // Show the main header only when scrolled to the very top
+      mainHeader.style.transform = "translateY(0)";
+      dropHeader.style.transform = "translateY(-100%)";
+    } else if (currentScrollY > lastScrollY) {
+      // Scrolling down
       mainHeader.style.transform = "translateY(-100%)";
       dropHeader.style.transform = "translateY(0)";
     } else {
-      mainHeader.style.transform = "translateY(0)";
-      dropHeader.style.transform = "translateY(-100%)";
+      // Scrolling up
+      mainHeader.style.transform = "translateY(-100%)";
+      dropHeader.style.transform = "translateY(0)";
     }
 
     lastScrollY = currentScrollY;
   });
+
 
   // Progress Bar Animation
   const skills = [
